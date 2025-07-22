@@ -94,7 +94,7 @@ cmd_<subcomando>()          # Una función por cada subcomando definido que cont
     }
     ``` 
 
-    Estas funciones pueden validar flags propias usando la varibale global del script `ARGS` y crear varibles locales para implementar lógica propia del subcomando:
+    Estas funciones pueden validar flags propias usando la variable global del script `ARGS` y crear variables locales para implementar lógica propia del subcomando:
 
     ```bash
     local CONFIG_FILE=""
@@ -107,7 +107,7 @@ cmd_<subcomando>()          # Una función por cada subcomando definido que cont
           [[ -z "$CONFIG_FILE" ]] && error "'${ARGS[$i]}' necesita un argumento";
 
           ((i++))
-          # En caso que la opcion use mas argumentos
+          # En caso que la opción use más argumentos
           # ((i += N))
           ;;
         *)
@@ -128,7 +128,7 @@ cmd_<subcomando>()          # Una función por cada subcomando definido que cont
       ...
     log "$cmd"
     ```
-    Notesé que un `log` útil puede ser mostrar el comando que se ejecutó, incluso podés agregar las banderas usadas y sus argumentos.
+    Nótese que un `log` útil puede ser mostrar el comando que se ejecutó, incluso podés agregar las banderas usadas y sus argumentos.
 
 6. **Agregar validación de flags globales (opcionales)**  
   En la sección `🚀 LÓGICA DEL COMANDO` hay un apartado `# Validar opcionales`, agregá aquí aquellas banderas que apliquen globalmente y no sean específicas de un subcomando. Por ejemplo:
