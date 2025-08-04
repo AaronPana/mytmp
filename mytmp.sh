@@ -8,7 +8,7 @@
 # 🔧 CONFIG
 # ============
 
-SCRIPT_NAME=$0
+SCRIPT_NAME=$(basename "$0")
 SUBCOMMAND=""
 VERBOSE=false
 ARGS=()
