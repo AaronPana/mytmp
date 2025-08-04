@@ -26,7 +26,7 @@ VALID_FLAGS_PATTERN=$(IFS="|"; echo "${VALID_FLAGS_WITH_ARG[*]}")
 # ===============
 
 log() {
-  [ "$VERBOSE" = true ] && echo "[LOG] $*"
+  [ "$VERBOSE" = true ] && echo "[LOG] $*";
 }
 
 error() {
@@ -78,7 +78,7 @@ validateSubcommand() {
 
 cmd_start() {
   log "Iniciando proceso..."
-  local cmd=">> $SCRIPT_NAME start"
+  local cmd="$SCRIPT_NAME start"
   
   local CONFIG_FILE=""
 
@@ -100,7 +100,7 @@ cmd_start() {
     esac
   done
   
-  log "$cmd"
+  log "Comando ejecutado: '$cmd'"
   echo "🚀 Comando START ejecutado"
   exit 0
 }
@@ -108,9 +108,9 @@ cmd_start() {
 cmd_stop() {
   log "Deteniendo proceso..."
   
-  local cmd=">> $SCRIPT_NAME stop"
+  local cmd="$SCRIPT_NAME stop"
   
-  log "$cmd"
+  log "Comando ejecutado: '$cmd'"
   echo "🛑 Comando STOP ejecutado"
   exit 0
 }
@@ -118,9 +118,9 @@ cmd_stop() {
 cmd_status() {
   log "Consultando estado..."
 
-  local cmd=">> $SCRIPT_NAME status"
+  local cmd="$SCRIPT_NAME status"
 
-  log "$cmd"
+  log "Comando ejecutado: '$cmd'"
   echo "📊 Comando STATUS ejecutado"
   exit 0
 }
