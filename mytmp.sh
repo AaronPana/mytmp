@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # =========================
-# 🧩 TEMPLATE DE COMANDO
+# TEMPLATE DE COMANDO
 # =========================
 
 # ============
-# 🔧 CONFIG
+# CONFIG
 # ============
 
 SCRIPT_NAME=$(basename "$0")
@@ -22,7 +22,7 @@ VALID_FLAGS_WITH_ARG=("-c" "--config")
 VALID_FLAGS_PATTERN=$(IFS="|"; echo "${VALID_FLAGS_WITH_ARG[*]}")
 
 # ===============
-# 🧪 FUNCIONES
+# FUNCIONES
 # ===============
 
 log() {
@@ -73,7 +73,7 @@ validateSubcommand() {
 }
 
 # ==============
-# 🎛️ SUBCOMANDOS
+# SUBCOMANDOS
 # ==============
 
 cmd_start() {
@@ -101,7 +101,7 @@ cmd_start() {
   done
   
   log "Comando ejecutado: '$cmd'"
-  echo "🚀 Comando START ejecutado"
+  echo "Comando START ejecutado!"
   exit 0
 }
 
@@ -111,7 +111,7 @@ cmd_stop() {
   local cmd="$SCRIPT_NAME stop"
   
   log "Comando ejecutado: '$cmd'"
-  echo "🛑 Comando STOP ejecutado"
+  echo "Comando STOP ejecutado!"
   exit 0
 }
 
@@ -121,18 +121,18 @@ cmd_status() {
   local cmd="$SCRIPT_NAME status"
 
   log "Comando ejecutado: '$cmd'"
-  echo "📊 Comando STATUS ejecutado"
+  echo "Comando STATUS ejecutado!"
   exit 0
 }
 
 # ==============
-# 🎛️ OPCIONES
+# OPCIONES
 # ==============
 
 # op_config() {}
 
 # ========================
-# 🚀 LÓGICA DEL COMANDO
+# LÓGICA DEL COMANDO
 # ========================
 
 # Validar si no se reciben parametros
